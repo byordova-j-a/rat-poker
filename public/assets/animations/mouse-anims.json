@@ -1,0 +1,602 @@
+{
+  "anims": [
+    {
+      "key": "dark-blue-mouse-run",
+      "type": "frame",
+      "frames": [
+        { "key": "dark-blue-mouse", "frame": 0 },
+        { "key": "dark-blue-mouse", "frame": 1 },
+        { "key": "dark-blue-mouse", "frame": 2 },
+        { "key": "dark-blue-mouse", "frame": 3 },
+        { "key": "dark-blue-mouse", "frame": 4 }
+      ],
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "dark-blue-mouse-jump",
+      "type": "frame",
+      "frames": {
+        "key": "dark-blue-mouse",
+        "start": 5,
+        "end": 8
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "dark-blue-mouse-stand",
+      "type": "frame",
+      "frames": {
+        "key": "dark-blue-mouse",
+        "start": 0,
+        "end": 0
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+
+    {
+      "key": "dark-blue-mouse-m-walk",
+      "type": "frame",
+      "frames": {
+        "key": "dark-blue-mouse",
+        "start": 9,
+        "end": 13
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "dark-blue-mouse-m-jump",
+      "type": "frame",
+      "frames": {
+        "key": "dark-blue-mouse",
+        "start": 14,
+        "end": 17
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "dark-blue-mouse-m-stand",
+      "type": "frame",
+      "frames": {
+        "key": "dark-blue-mouse",
+        "start": 9,
+        "end": 9
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+
+    {
+      "key": "dark-blue-mouse-p-walk",
+      "type": "frame",
+      "frames": {
+        "key": "dark-blue-mouse",
+        "start": 18,
+        "end": 22
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "dark-blue-mouse-p-jump",
+      "type": "frame",
+      "frames": {
+        "key": "dark-blue-mouse",
+        "start": 23,
+        "end": 26
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "dark-blue-mouse-p-stand",
+      "type": "frame",
+      "frames": {
+        "key": "dark-blue-mouse",
+        "start": 23,
+        "end": 23
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "red-mouse-run",
+      "type": "frame",
+      "frames": {
+        "key": "red-mouse",
+        "start": 0,
+        "end": 4
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "red-mouse-jump",
+      "type": "frame",
+      "frames": {
+        "key": "red-mouse",
+        "start": 5,
+        "end": 8
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "red-mouse-stand",
+      "type": "frame",
+      "frames": {
+        "key": "red-mouse",
+        "start": 0,
+        "end": 0
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "red-mouse-m-walk",
+      "type": "frame",
+      "frames": {
+        "key": "red-mouse",
+        "start": 9,
+        "end": 13
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "red-mouse-m-jump",
+      "type": "frame",
+      "frames": {
+        "key": "red-mouse",
+        "start": 14,
+        "end": 17
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "red-mouse-m-stand",
+      "type": "frame",
+      "frames": {
+        "key": "red-mouse",
+        "start": 9,
+        "end": 9
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "red-mouse-p-walk",
+      "type": "frame",
+      "frames": {
+        "key": "red-mouse",
+        "start": 18,
+        "end": 22
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "red-mouse-p-jump",
+      "type": "frame",
+      "frames": {
+        "key": "red-mouse",
+        "start": 23,
+        "end": 26
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "red-mouse-p-stand",
+      "type": "frame",
+      "frames": {
+        "key": "red-mouse",
+        "start": 23,
+        "end": 23
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "green-mouse-run",
+      "type": "frame",
+      "frames": {
+        "key": "green-mouse",
+        "start": 0,
+        "end": 4
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "green-mouse-jump",
+      "type": "frame",
+      "frames": {
+        "key": "green-mouse",
+        "start": 5,
+        "end": 8
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "green-mouse-stand",
+      "type": "frame",
+      "frames": {
+        "key": "green-mouse",
+        "start": 0,
+        "end": 0
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "green-mouse-m-walk",
+      "type": "frame",
+      "frames": {
+        "key": "green-mouse",
+        "start": 9,
+        "end": 13
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "green-mouse-m-jump",
+      "type": "frame",
+      "frames": {
+        "key": "green-mouse",
+        "start": 14,
+        "end": 17
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "green-mouse-m-stand",
+      "type": "frame",
+      "frames": {
+        "key": "green-mouse",
+        "start": 9,
+        "end": 9
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "green-mouse-p-walk",
+      "type": "frame",
+      "frames": {
+        "key": "green-mouse",
+        "start": 18,
+        "end": 22
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "green-mouse-p-jump",
+      "type": "frame",
+      "frames": {
+        "key": "green-mouse",
+        "start": 23,
+        "end": 26
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "green-mouse-p-stand",
+      "type": "frame",
+      "frames": {
+        "key": "green-mouse",
+        "start": 23,
+        "end": 23
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "orange-mouse-run",
+      "type": "frame",
+      "frames": {
+        "key": "orange-mouse",
+        "start": 0,
+        "end": 4
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "orange-mouse-jump",
+      "type": "frame",
+      "frames": {
+        "key": "orange-mouse",
+        "start": 5,
+        "end": 8
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "orange-mouse-stand",
+      "type": "frame",
+      "frames": {
+        "key": "orange-mouse",
+        "start": 0,
+        "end": 0
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "orange-mouse-m-walk",
+      "type": "frame",
+      "frames": {
+        "key": "orange-mouse",
+        "start": 9,
+        "end": 13
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "orange-mouse-m-jump",
+      "type": "frame",
+      "frames": {
+        "key": "orange-mouse",
+        "start": 14,
+        "end": 17
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "orange-mouse-m-stand",
+      "type": "frame",
+      "frames": {
+        "key": "orange-mouse",
+        "start": 9,
+        "end": 9
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "orange-mouse-p-walk",
+      "type": "frame",
+      "frames": {
+        "key": "orange-mouse",
+        "start": 18,
+        "end": 22
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "orange-mouse-p-jump",
+      "type": "frame",
+      "frames": {
+        "key": "orange-mouse",
+        "start": 23,
+        "end": 26
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "orange-mouse-p-stand",
+      "type": "frame",
+      "frames": {
+        "key": "orange-mouse",
+        "start": 23,
+        "end": 23
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "yellow-mouse-run",
+      "type": "frame",
+      "frames": {
+        "key": "yellow-mouse",
+        "start": 0,
+        "end": 4
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "yellow-mouse-jump",
+      "type": "frame",
+      "frames": {
+        "key": "yellow-mouse",
+        "start": 5,
+        "end": 8
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "yellow-mouse-stand",
+      "type": "frame",
+      "frames": {
+        "key": "yellow-mouse",
+        "start": 0,
+        "end": 0
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "yellow-mouse-m-walk",
+      "type": "frame",
+      "frames": {
+        "key": "yellow-mouse",
+        "start": 9,
+        "end": 13
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "yellow-mouse-m-jump",
+      "type": "frame",
+      "frames": {
+        "key": "yellow-mouse",
+        "start": 14,
+        "end": 17
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "yellow-mouse-m-stand",
+      "type": "frame",
+      "frames": {
+        "key": "yellow-mouse",
+        "start": 9,
+        "end": 9
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "yellow-mouse-p-walk",
+      "type": "frame",
+      "frames": {
+        "key": "yellow-mouse",
+        "start": 18,
+        "end": 22
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "yellow-mouse-p-jump",
+      "type": "frame",
+      "frames": {
+        "key": "yellow-mouse",
+        "start": 23,
+        "end": 26
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "yellow-mouse-p-stand",
+      "type": "frame",
+      "frames": {
+        "key": "yellow-mouse",
+        "start": 23,
+        "end": 23
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "pink-mouse-run",
+      "type": "frame",
+      "frames": {
+        "key": "pink-mouse",
+        "start": 0,
+        "end": 4
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "pink-mouse-jump",
+      "type": "frame",
+      "frames": {
+        "key": "pink-mouse",
+        "start": 5,
+        "end": 8
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "pink-mouse-stand",
+      "type": "frame",
+      "frames": {
+        "key": "pink-mouse",
+        "start": 0,
+        "end": 0
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "pink-mouse-m-walk",
+      "type": "frame",
+      "frames": {
+        "key": "pink-mouse",
+        "start": 9,
+        "end": 13
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "pink-mouse-m-jump",
+      "type": "frame",
+      "frames": {
+        "key": "pink-mouse",
+        "start": 14,
+        "end": 17
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "pink-mouse-m-stand",
+      "type": "frame",
+      "frames": {
+        "key": "pink-mouse",
+        "start": 9,
+        "end": 9
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "pink-mouse-p-walk",
+      "type": "frame",
+      "frames": {
+        "key": "pink-mouse",
+        "start": 18,
+        "end": 22
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "pink-mouse-p-jump",
+      "type": "frame",
+      "frames": {
+        "key": "pink-mouse",
+        "start": 23,
+        "end": 26
+      },
+      "frameRate": 10,
+      "repeat": -1
+    },
+    {
+      "key": "pink-mouse-p-stand",
+      "type": "frame",
+      "frames": {
+        "key": "pink-mouse",
+        "start": 23,
+        "end": 23
+      },
+      "frameRate": 10,
+      "repeat": -1
+    }
+  ]
+}
