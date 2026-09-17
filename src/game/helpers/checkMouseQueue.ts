@@ -3,6 +3,7 @@ import { NONE, DOWN, LEFT } from '~/game/constants';
 import { TMouseStreak } from '~/game/types';
 
 export function checkMouseQueue(this: Level) {
+  let combId = 0;
   if (this.openedDoorTickAmount) {
     this.openedDoorTickAmount--;
     if (!this.openedDoorTickAmount) {
@@ -49,6 +50,16 @@ export function checkMouseQueue(this: Level) {
       if (streakList.length === 1 && totalAmount < this.maxMouseQeueLength) return;
       this.flowGrid[this.exitCoords.y][this.exitCoords.x] = DOWN;
       this.openedDoorTickAmount = amount;
+      if (amount === 3) {
+        console.log('comb1');
+        // this.registry.set('createdCombination', 1);
+        this.createdCombinationId = 1;
+      }
+      if (amount === 4) {
+        console.log('comb2');
+        // this.registry.set('createdCombination', 2);
+        this.createdCombinationId = 2;
+      }
       return;
     }
     if (streakList.length > 1) {

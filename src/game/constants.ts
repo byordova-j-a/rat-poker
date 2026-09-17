@@ -10,7 +10,11 @@ export const GAME_TICK_1 = 500;
 export const GAME_TICK_2 = 300;
 
 export const HEADER_HEIGHT = 60;
-export const VIEWPORT_MARGIN = 5;
+// export const VIEWPORT_MARGIN = 6.75;
+// export const VIEPORT_SIZE = 526.5;
+export const VIEWPORT_MARGIN = 6;
+export const VIEPORT_SIZE = 526;
+export const COEF = 1.345;
 
 export const BUTTON_PADDING = 10;
 export const BUTTON_DEFAULT_FONT_SIZE = 20;

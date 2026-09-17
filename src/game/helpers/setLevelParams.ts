@@ -171,27 +171,6 @@ export function setLevelParams(this: Level, levelId: number) {
     .setDisplaySize(39, 32)
     .setDepth(10);
 
-  let graphics = this.make.graphics();
-
-  const innerRadius = 10;
-  const outerRadius = 15;
-  const startAngle = Phaser.Math.DegToRad(180); // Начало дуги
-  const endAngle = Phaser.Math.DegToRad(240);
-
-  graphics
-    .lineStyle(2, 0x000000, 1)
-    .strokeCircle(21, 21, 19)
-    .lineStyle(2, 0xffffff, 1)
-    .strokeCircle(21, 21, 20)
-    .fillStyle(0xffffff, 1)
-    .beginPath()
-    .arc(21, 21, outerRadius, startAngle, endAngle, false)
-    .arc(21, 21, innerRadius, endAngle, startAngle, true)
-    .closePath()
-    .fillPath();
-
-  graphics.generateTexture('bubble', 42, 42);
-
   this.pinwheelVanesConfigList.forEach(({ angle, id, mousePlacePoint }) => {
     const vane = this.add
       .image(0, 0, 'pinwheelVanes', 0)

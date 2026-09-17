@@ -9,15 +9,17 @@ export class UIHeader extends Scene {
   }
 
   create() {
-    this.cameras.main.setViewport(0, 0, 800, HEADER_HEIGHT);
+    const { width, height } = this.scale;
+    console.log(width);
+    this.cameras.main.setViewport(0, 0, width, HEADER_HEIGHT);
 
-    let bg = this.add.image(400, 30, '__WHITE'); // Используем встроенную белую текстуру
-    bg.setDisplaySize(800, 60);
+    let bg = this.add.image(width / 2, 30, '__WHITE'); // Используем встроенную белую текстуру
+    bg.setDisplaySize(width, 60);
     bg.setTint(0x0080ff, 0x0080ff, 0x0033aa, 0x0033aa);
     const gr = this.add.graphics();
 
     gr.fillStyle(0xffffff, 1);
-    gr.fillRect(0, 30, 800, 30);
+    gr.fillRect(0, 30, width, 30);
     const iconContainer = this.add.container(5, 5);
     const text = this.add.text(30, 0, 'Rat Poker', { fontFamily: 'Arial', fontSize: '20px' });
     const mouse = this.add.image(10, 10, 'red-mouse', 0).setDisplaySize(20, 20);

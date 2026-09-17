@@ -27,7 +27,7 @@ import { UISidebar } from '~/game/scenes/UISidebar';
 // };
 const config = {
   type: Phaser.AUTO,
-  width: 800,
+  width: 837,
   height: 600,
   // width: 1024,
   // height: 768,

@@ -81,9 +81,11 @@ export class UIModalWindow extends Scene {
         GameState.setLaunchedScene(null);
         GameState.currentLevel = null;
         this.registry.set('currentLevel', null);
+        this.registry.set('showedLevel', null);
 
         this.scene.start('LevelsMap');
         GameState.setMainScene('LevelsMap');
+        this.registry.set('scene', { type: 'levelsMap', value: null });
       },
     });
 
@@ -100,8 +102,10 @@ export class UIModalWindow extends Scene {
         GameState.setLaunchedScene(null);
         GameState.currentLevel = null;
         this.registry.set('currentLevel', null);
+        this.registry.set('showedLevel', null);
         this.scene.start('MainMenu');
         GameState.setMainScene('MainMenu');
+        this.registry.set('scene', { type: 'mainMenu', value: null });
       },
     });
 

@@ -27,9 +27,11 @@ export class Preloader extends Scene {
 
     const imageList = [
       { key: 'bg1', path: 'assets/background/bg1.jpg' },
+      { key: 'main-bg', path: 'assets/background/main-bg.jpg' },
       { key: 'circle', path: 'assets/circle.png' },
       { key: 'map', path: 'assets/map.png' },
       { key: 'pinwheelCenter', path: 'assets/pinwheelCenter.png' },
+      { key: 'levelBanner', path: 'assets/level-banner.jpg' },
     ];
 
     imageList.forEach(({ key, path }) => {
@@ -54,6 +56,11 @@ export class Preloader extends Scene {
     this.load.spritesheet('pinwheelVanes', 'assets/pinwheelVanes2.png', {
       frameWidth: 60,
       frameHeight: 8,
+    });
+    this.load.spritesheet('combinations', 'assets/sprites/combinations.png', {
+      frameWidth: 216,
+      frameHeight: 34,
+      spacing: 14,
     });
   }
 
@@ -88,11 +95,35 @@ export class Preloader extends Scene {
       repeat: 0,
     });
     this.registry.set('currentLevel', null);
+    this.registry.set('showedLevel', null);
 
     this.scene.launch('UIHeader');
 
     this.scene.start('MainMenu');
     this.scene.launch('UISidebar');
+    this.registry.set('scene', { type: 'mainMenu', value: null });
+    this.registry.set('createdCombination', 0);
+    let graphics = this.make.graphics();
+
+    const innerRadius = 10;
+    const outerRadius = 15;
+    const startAngle = Phaser.Math.DegToRad(180); // Начало дуги
+    const endAngle = Phaser.Math.DegToRad(240);
+
+    graphics
+      .lineStyle(2, 0x000000, 1)
+      .strokeCircle(21, 21, 19)
+      .lineStyle(2, 0xffffff, 1)
+      .strokeCircle(21, 21, 20)
+      .fillStyle(0xffffff, 1)
+      .beginPath()
+      .arc(21, 21, outerRadius, startAngle, endAngle, false)
+      .arc(21, 21, innerRadius, endAngle, startAngle, true)
+      .closePath()
+      .fillPath();
+
+    graphics.generateTexture('bubble', 42, 42);
+    graphics.destroy();
     GameState.setMainScene('MainMenu');
   }
 }

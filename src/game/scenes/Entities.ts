@@ -56,9 +56,16 @@ export class Mouse extends Phaser.GameObjects.Sprite {
     this.gridPosition = { x, y };
   }
 
-  public updateCautchState(isCautched: boolean, newStartPoint: TLocation, newEndPoint?: TLocation) {
+  public updateCautchState(params: {
+    isCautched: boolean;
+    newStartPoint: TLocation;
+    newEndPoint?: TLocation;
+    coords: TLocation;
+  }) {
+    const { isCautched, newStartPoint, newEndPoint, coords } = params;
     this.isCautched = isCautched;
     this.setRoute(newStartPoint, newEndPoint || newStartPoint);
+    this.gridPosition = { ...coords };
   }
 
   updateDirectionProperties() {

@@ -17,7 +17,11 @@ export function cautchMouse(this: Level) {
   const pos = this.pinwheelVanesMousePlace[currentPinWheelId];
   if (cautchedMouse) {
     if (newMouse) {
-      newMouse.updateCautchState(true, { x: 0, y: 0 });
+      newMouse.updateCautchState({
+        isCautched: true,
+        coords: { x: -1, y: -1 },
+        newStartPoint: { x: 0, y: 0 },
+      });
       pos?.addAt(newMouse, 0);
 
       pinwheelState.mouse = newMouse;
@@ -34,18 +38,28 @@ export function cautchMouse(this: Level) {
     if (this.isCellStateListUpdated) {
       const previousPoint = this.layoutGrid[previousCellCoords.y][previousCellCoords.x];
 
-      cautchedMouse.updateCautchState(false, previousPoint, this.layoutGrid[y][x]);
+      cautchedMouse.updateCautchState({
+        isCautched: false,
+        coords: { x, y },
+        newStartPoint: previousPoint,
+        newEndPoint: this.layoutGrid[y][x],
+      });
     } else {
       const nextPoint = this.layoutGrid[nextCellCoords.y][nextCellCoords.x];
-      cautchedMouse.updateCautchState(false, this.layoutGrid[y][x], nextPoint);
+      cautchedMouse.updateCautchState({
+        isCautched: false,
+        coords: nextCellCoords,
+        newStartPoint: this.layoutGrid[y][x],
+        newEndPoint: nextPoint,
+      });
     }
 
     if (this.isCellStateListUpdated) {
-      cautchedMouse.setGridPosition(x, y);
+      // cautchedMouse.setGridPosition(x, y);
       this.cellStateList[cellId] = cautchedMouse;
       this.cellReservedState[cellId] = cautchedMouse.id;
     } else {
-      cautchedMouse.setGridPosition(nextCellCoords.x, nextCellCoords.y);
+      // cautchedMouse.setGridPosition(nextCellCoords.x, nextCellCoords.y);
       this.cellStateList[cellId] = cautchedMouse;
       this.cellReservedState[cellId - 1] = cautchedMouse.id;
     }
@@ -53,7 +67,11 @@ export function cautchMouse(this: Level) {
     return;
   }
   if (newMouse) {
-    newMouse.updateCautchState(true, { x: 0, y: 0 });
+    newMouse.updateCautchState({
+      isCautched: true,
+      coords: { x: -1, y: -1 },
+      newStartPoint: { x: 0, y: 0 },
+    });
     pinwheelState.mouse = newMouse;
     pos?.addAt(newMouse, 0);
     const bubble = pos!.getByName('bubble');

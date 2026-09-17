@@ -105,5 +105,10 @@ export const LEVELS_CONFIG: { [key in number]: TLevelConfig } = {
     entryCoords: { x: 3, y: 2 },
     pinwheelCoords: { x: 4, y: 5 },
     counterCoords: { x: 0, y: 7 },
+
+    inform: {
+      points: 0,
+      combinationIdList: [1, 2],
+    },
   },
 };

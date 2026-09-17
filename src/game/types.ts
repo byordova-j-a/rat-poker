@@ -55,6 +55,12 @@ export type TLevelConfigCoords = {
     | 'pinwheelCoords'
     | 'counterCoords']: TLocation;
 };
+export type TInformConfig = {
+  inform: {
+    combinationIdList: number[];
+    points: number;
+  };
+};
 
 export type TLevelConfigNumberGrids = {
   [key in 'levelGrid' | 'specialElementGrid']: number[][];
@@ -83,7 +89,8 @@ export type TLevelConfig = {
   gameTick: number;
 } & TLevelConfigNumberGrids &
   TLevelConfigLocationGrids &
-  TLevelConfigCoords;
+  TLevelConfigCoords &
+  TInformConfig;
 
 export type TMouseStreak = {
   color: EMouseColor;

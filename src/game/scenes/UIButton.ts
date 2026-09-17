@@ -50,10 +50,21 @@ export class UIButton extends Phaser.GameObjects.Container {
 
     const buttonWidth = width || this.labelTextElement.width + 2 * BUTTON_PADDING;
     const buttonHeight = this.labelTextElement.height + 2 * BUTTON_PADDING;
+    console.log(buttonHeight, buttonWidth);
+    const strokeWidth = 2;
+    const halfStroke = strokeWidth / 2;
 
     this.bg = scene.add.graphics();
-    this.bg.fillStyle(this.disabled ? 0x666666 : 0x135df4, 1);
-    this.bg.fillRect(0, 0, buttonWidth, buttonHeight);
+    this.bg.fillStyle(this.disabled ? 0x666666 : 0x533a26, 1);
+    this.bg.fillRoundedRect(0, 0, buttonWidth, buttonHeight, 5);
+    this.bg.lineStyle(strokeWidth, 0x322012, 1);
+    this.bg.strokeRoundedRect(
+      halfStroke,
+      halfStroke,
+      buttonWidth - strokeWidth,
+      buttonHeight - 2,
+      strokeWidth
+    );
 
     this.add([this.bg, this.labelTextElement]);
     // scene.add.existing(this);
@@ -66,7 +77,7 @@ export class UIButton extends Phaser.GameObjects.Container {
       useHandCursor: true,
     });
 
-    scene.input.enableDebug(this);
+    // scene.input.enableDebug(this);
 
     this.on(
       'pointerdown',
